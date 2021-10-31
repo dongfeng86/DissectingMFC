@@ -1,0 +1,46 @@
+# ignore some files
+Debug/
+Release/
+x64/
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.suo
+*.vs
+*.sln
+*.filters
+
+# Precompiled Headers
+*.gch
+*.pch
+*.ncb
+*.user
+*.aps
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.VC.db
