@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FRAME3.04", "FRAME3.04\FRAM
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "含有静态成员变量的结构体初始化", "含有静态成员变量的结构体初始化\含有静态成员变量的结构体初始化.vcxproj", "{3B436282-5616-4C61-AA49-1B99D764A6B0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FRAME3.06", "FRAME6.03\FRAME6.03.vcxproj", "{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{3B436282-5616-4C61-AA49-1B99D764A6B0}.Release|x64.Build.0 = Release|x64
 		{3B436282-5616-4C61-AA49-1B99D764A6B0}.Release|x86.ActiveCfg = Release|Win32
 		{3B436282-5616-4C61-AA49-1B99D764A6B0}.Release|x86.Build.0 = Release|Win32
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Debug|x64.ActiveCfg = Debug|x64
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Debug|x64.Build.0 = Debug|x64
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Debug|x86.Build.0 = Debug|Win32
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Release|x64.ActiveCfg = Release|x64
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Release|x64.Build.0 = Release|x64
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Release|x86.ActiveCfg = Release|Win32
+		{6E1FBE9B-0A80-4335-BE21-BFA3E9B544BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
