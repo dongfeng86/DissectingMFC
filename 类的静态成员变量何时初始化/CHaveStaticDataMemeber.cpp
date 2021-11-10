@@ -23,6 +23,13 @@ int CHaveStaticDataMemember::m_iStaticInitial = 3;
 //情况2：若类的静态成员变量采用动态初始化，是由运行时调用的，调试时可以跟踪到
 int CHaveStaticDataMemember::m_iDynInitial = DuplicateInt(3);	
 
+/*	特殊情况：如果说没有头文件中的变量声明，此处是无法编译通过的。
+	对于出现在同一个编译单元内的全局变量来说，它们初始化的顺序与他们声明的顺序是一致的（销毁的顺序则反过来），
+	而对于不同编译单元间的全局变量，c++ 标准并没有明确规定它们之间的初始化（销毁）顺序应该怎样
+*/
+int s_iSeond = 5 * s_iFirst;	//由于在头文件中提前声明了s_iFirst和s_iSeond，所以编译时就按照这个顺序进行
+int s_iFirst = 5;
+
 //情况3：全局变量和类的静态成员变量一样，如果采用静态初始化，是在加载的时候完成的初始化，调试时无法跟踪到
 int s_iGlobalStatic = 8*2;
 

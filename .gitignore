@@ -13,7 +13,6 @@ x64/
 *.obj
 *.suo
 *.vs
-*.filters
 
 # Precompiled Headers
 *.gch
