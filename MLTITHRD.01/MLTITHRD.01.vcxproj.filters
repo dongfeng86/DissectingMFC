@@ -15,22 +15,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MFC.H">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MY.H">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="AFXMSG.h">
+    <ClInclude Include="MLTITHRD.H">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MFC.CPP">
+    <ClCompile Include="MLTITHRD.C">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MY.CPP">
-      <Filter>源文件</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="JJHOUR.ICO">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MLTITHRD.RC">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
