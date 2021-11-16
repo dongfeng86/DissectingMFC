@@ -15,21 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MFC.H">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MY.H">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="AFXMSG.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="MFC.CPP">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MY.CPP">
+    <ClCompile Include="MFCCON.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
