@@ -3,6 +3,7 @@
 // 供 Scribble.rc 使用
 //
 #define IDD_ABOUTBOX                    100
+#define IDC_NODROP                      106
 #define IDR_MAINFRAME                   128
 #define IDR_ScribTYPE                   130
 #define ID_WINDOW_MANAGER               131

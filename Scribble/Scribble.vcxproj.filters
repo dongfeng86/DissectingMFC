@@ -68,6 +68,9 @@
     <None Include="res\Scribble.rc2">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="NODROP.cur">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Scribble.rc">

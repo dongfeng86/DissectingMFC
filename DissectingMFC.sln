@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "单例模式", "单例模�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scribble", "Scribble\Scribble.vcxproj", "{93A81286-D727-4F8B-83E6-E4A8BF8FD51F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HELLO.06", "HELLO.06\HELLO.06.vcxproj", "{518F8EC0-29EC-4D66-8381-F68868703318}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{93A81286-D727-4F8B-83E6-E4A8BF8FD51F}.Release|x64.Build.0 = Release|x64
 		{93A81286-D727-4F8B-83E6-E4A8BF8FD51F}.Release|x86.ActiveCfg = Release|Win32
 		{93A81286-D727-4F8B-83E6-E4A8BF8FD51F}.Release|x86.Build.0 = Release|Win32
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Debug|x64.ActiveCfg = Debug|x64
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Debug|x64.Build.0 = Debug|x64
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Debug|x86.ActiveCfg = Debug|Win32
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Debug|x86.Build.0 = Debug|Win32
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Release|x64.ActiveCfg = Release|x64
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Release|x64.Build.0 = Release|x64
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Release|x86.ActiveCfg = Release|Win32
+		{518F8EC0-29EC-4D66-8381-F68868703318}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
