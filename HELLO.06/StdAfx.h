@@ -3,5 +3,3 @@
 // but are changed infrequently
 
 #include <afxwin.h>   // MFC core and standard components
-
-
