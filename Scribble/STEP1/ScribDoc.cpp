@@ -150,6 +150,7 @@ void CStroke::Serialize(CArchive& ar)
 		m_nPenWidth = w;
 		m_pointArray.Serialize(ar);
 	}
+	CRect dd;
 }
 
 BOOL CStroke::DrawStroke(CDC* pDC)
