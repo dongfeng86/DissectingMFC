@@ -20,29 +20,29 @@
 class CStroke : public CObject
 {
 public:
-        CStroke(UINT nPenWidth);
+	CStroke(UINT nPenWidth);
 
 protected:
-        CStroke();
-        DECLARE_SERIAL(CStroke)
+	CStroke();
+	DECLARE_SERIAL(CStroke)
 
-// Attributes
+	// Attributes
 protected:
-        UINT                   m_nPenWidth;    // one pen width applies to entire stroke
+	UINT                   m_nPenWidth;    // one pen width applies to entire stroke
 public:
-        CArray<CPoint,CPoint>  m_pointArray;   // series of connected points
-        CRect               m_rectBounding; // smallest rect that surrounds all
-                                                                                // of the points in the stroke
+	CArray<CPoint, CPoint>  m_pointArray;   // series of connected points
+	CRect               m_rectBounding; // smallest rect that surrounds all
+																			// of the points in the stroke
 public:
-        CRect& GetBoundingRect() { return m_rectBounding; }
+	CRect& GetBoundingRect() { return m_rectBounding; }
 
-// Operations
+	// Operations
 public:
-        BOOL DrawStroke(CDC* pDC);
-        void FinishStroke();
+	BOOL DrawStroke(CDC* pDC);
+	void FinishStroke();
 
 public:
-        virtual void Serialize(CArchive& ar);
+	virtual void Serialize(CArchive& ar);
 };
 
 /////////////////////////////////////////////////////////////////////////////
@@ -50,69 +50,69 @@ public:
 class CScribbleDoc : public CDocument
 {
 protected: // create from serialization only
-        CScribbleDoc();
-        DECLARE_DYNCREATE(CScribbleDoc)
+	CScribbleDoc();
+	DECLARE_DYNCREATE(CScribbleDoc)
 
-// Attributes
+	// Attributes
 protected:
-        // The document keeps track of the current pen width on
-        // behalf of all views. We'd like the user interface of
-        // Scribble to be such that if the user chooses the Draw
-        // Thick Line command, it will apply to all views, not just
-        // the view that currently has the focus.
+	// The document keeps track of the current pen width on
+	// behalf of all views. We'd like the user interface of
+	// Scribble to be such that if the user chooses the Draw
+	// Thick Line command, it will apply to all views, not just
+	// the view that currently has the focus.
 
-        UINT            m_nPenWidth;        // current user-selected pen width
-        BOOL            m_bThickPen;        // TRUE if current pen is thick
-        UINT            m_nThinWidth;
-        UINT            m_nThickWidth;
-        CPen            m_penCur;           // pen created according to
-                                                                                // user-selected pen style (width)
+	UINT            m_nPenWidth;        // current user-selected pen width
+	BOOL            m_bThickPen;        // TRUE if current pen is thick
+	UINT            m_nThinWidth;
+	UINT            m_nThickWidth;
+	CPen            m_penCur;           // pen created according to
+																			// user-selected pen style (width)
 public:
-        CTypedPtrList<CObList,CStroke*>     m_strokeList;
-        CPen*           GetCurrentPen() { return &m_penCur; }
+	CTypedPtrList<CObList, CStroke*>     m_strokeList;
+	CPen*           GetCurrentPen() { return &m_penCur; }
 
 protected:
-        CSize           m_sizeDoc;
+	CSize           m_sizeDoc;
 public:
-        CSize GetDocSize() { return m_sizeDoc; }
+	CSize GetDocSize() { return m_sizeDoc; }
 
-// Operations
+	// Operations
 public:
-        CStroke* NewStroke();
+	CStroke* NewStroke();
 
-// Overrides
-        // ClassWizard generated virtual function overrides
-        //{{AFX_VIRTUAL(CScribbleDoc)
-        public:
-        virtual BOOL OnNewDocument();
-        virtual void Serialize(CArchive& ar);
-        virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
-        virtual void DeleteContents();
-        //}}AFX_VIRTUAL
+	// Overrides
+			// ClassWizard generated virtual function overrides
+			//{{AFX_VIRTUAL(CScribbleDoc)
+public:
+	virtual BOOL OnNewDocument();
+	virtual void Serialize(CArchive& ar);
+	virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
+	virtual void DeleteContents();
+	//}}AFX_VIRTUAL
 
 // Implementation
 protected:
-        void ReplacePen();
+	void ReplacePen();
 
 public:
-        virtual ~CScribbleDoc();
+	virtual ~CScribbleDoc();
 #ifdef _DEBUG
-        virtual void AssertValid() const;
-        virtual void Dump(CDumpContext& dc) const;
+	virtual void AssertValid() const;
+	virtual void Dump(CDumpContext& dc) const;
 #endif
 
 protected:
-        void            InitDocument();
+	void            InitDocument();
 
-// Generated message map functions
+	// Generated message map functions
 protected:
-        //{{AFX_MSG(CScribbleDoc)
-        afx_msg void OnEditClearAll();
-        afx_msg void OnPenThickOrThin();
-        afx_msg void OnUpdateEditClearAll(CCmdUI* pCmdUI);
-        afx_msg void OnUpdatePenThickOrThin(CCmdUI* pCmdUI);
-        afx_msg void OnPenWidths();
-        //}}AFX_MSG
-        DECLARE_MESSAGE_MAP()
+	//{{AFX_MSG(CScribbleDoc)
+	afx_msg void OnEditClearAll();
+	afx_msg void OnPenThickOrThin();
+	afx_msg void OnUpdateEditClearAll(CCmdUI* pCmdUI);
+	afx_msg void OnUpdatePenThickOrThin(CCmdUI* pCmdUI);
+	afx_msg void OnPenWidths();
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
 };
 

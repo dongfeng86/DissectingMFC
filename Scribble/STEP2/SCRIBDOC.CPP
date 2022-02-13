@@ -33,6 +33,8 @@ BEGIN_MESSAGE_MAP(CScribbleDoc, CDocument)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_CLEAR_ALL, OnUpdateEditClearAll)
 	ON_UPDATE_COMMAND_UI(ID_PEN_THICK_OR_THIN, OnUpdatePenThickOrThin)
 	//}}AFX_MSG_MAP
+	ON_COMMAND(ID_NEWADD_NOUSE, &CScribbleDoc::OnNewaddNouse)
+	ON_UPDATE_COMMAND_UI(ID_NEWADD_NOUSE, &CScribbleDoc::OnUpdateNewaddNouse)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -208,4 +210,16 @@ void CScribbleDoc::OnUpdatePenThickOrThin(CCmdUI* pCmdUI)
 	// Add check mark to Draw Thick Line menu item, if the current
 	// pen width is "thick".
 	pCmdUI->SetCheck(m_bThickPen);
+}
+
+
+void CScribbleDoc::OnNewaddNouse()
+{
+	// TODO: 在此添加命令处理程序代码
+}
+
+
+void CScribbleDoc::OnUpdateNewaddNouse(CCmdUI *pCmdUI)
+{
+	// TODO: 在此添加命令更新用户界面处理程序代码
 }

@@ -147,6 +147,28 @@ CScribbleDoc* CScribbleView::GetDocument() // non-debug version is inline
 
 void CScribbleView::OnLButtonDown(UINT, CPoint point) 
 {
+	//在win10下验证，只要是是16：9类型（自己的笔记本屏幕是16:9的）的分辨率，
+	//屏幕尺寸不会发生变化，就是屏幕的实际显示尺寸。
+	//逻辑像素就是所选择的分辨率。
+	//每逻辑英寸像素点数和缩放与比例的设置有关：
+	//当缩放比例为100%时，每逻辑英寸像素点数为96；125%→120；150%→144；200%→168
+
+	HDC hDc = ::GetDC(HWND(NULL));
+
+	//屏幕的尺寸（和屏幕实际选择的范围相关）
+	int iScreenWidth = ::GetDeviceCaps(hDc, HORZSIZE);
+	int iScreenHgt = ::GetDeviceCaps(hDc, VERTSIZE);
+
+	//逻辑像素数(和选择的分辨率相同)
+	int pagecx = ::GetDeviceCaps(hDc, HORZRES);
+	int pagecy = ::GetDeviceCaps(hDc, VERTRES);
+
+	//每逻辑英寸像素点数（和缩放比例相关）
+	short cxInch = ::GetDeviceCaps(hDc, LOGPIXELSX);
+	short cyInch = ::GetDeviceCaps(hDc, LOGPIXELSY);
+
+	::ReleaseDC(HWND(NULL), hDc);
+
     // Pressing the mouse button in the view window starts a new stroke
 
 	// CScrollView changes the viewport origin and mapping mode.
